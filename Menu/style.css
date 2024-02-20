@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+      font-family: "Cinzel", serif;
+      font-optical-sizing: auto;
+      font-weight: 600;
+      font-style: normal;
+
+    background-image: url("../Imagens/um-templo-grego-em-um-penhasco-com-vista-para-o-mar_865967-45448.avif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: auto;
+    transition: all 1s linear;
+    overflow: hidden;
+}
+.wrap-everything{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2vh;
+    height: 100%;
+    width: 100%;
+}
+    
