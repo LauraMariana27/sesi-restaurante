@@ -53,6 +53,11 @@ h2 {
   height: 15rem;
 }
 
+.card{
+  width: 22rem;
+  height: 35rem;
+}
+
 .hidden {
   display: none !important;
 }

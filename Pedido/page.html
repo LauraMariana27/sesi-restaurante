@@ -39,15 +39,39 @@
       <label for="exampleFormControlInput1" class="form-label">Nome:</label>
       <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Insira Seu Nome">
     </div>
-    <div class="mb-3">
-      <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-    </div>
 
     <button type="button" class="btn btn-outline" onclick="comecar()">Começar</button>
 
     <div id="selects-div">
       <h2>Olá <span id="nomePrint"></span>, vamos começar a escolher sua refeição!</h2>
+      <h3>Pratos</h3>
+      <select class="form-select" aria-label="Default select example" id="selectPratos">
+        <option selected>Escolha seus pratos:</option>
+        <option value="1">Favorito do Olimpo</option>
+        <option value="2">Forja de Hefesto</option>
+        <option value="3">Caçada de Ártemis</option>
+      </select>
+      <h3>Bebidas</h3>
+    <select class="form-select" aria-label="Default select example" id="selectBebidas">
+      <option selected>Escolha suas bebidas</option>
+      <option value="1">Submundo</option>
+      <option value="2">Paixão de Afrodite</option>
+      <option value="3">Melodia de Apolo</option>
+    </select>
+    <h3>Sobremesas</h3>
+    <select class="form-select" aria-label="Default select example" id="selectSobremesas">
+      <option selected>Escolha suas sobremesas:</option>
+      <option value="1">Ambrosia</option>
+      <option value="2">Doce Afrodite</option>
+      <option value="3">Armadilha de Perséfone</option>
+    </select>
+    <div>
+      <button class="btn btn-success" type="button" onclick="calcularTotal()">Fazer Pedido</button>
+      <button class="btn btn-outline-secondary" type="button" onclick="limpar()">Limpar</button>
     </div>
-</body>
+    <div>
+    </div>
+      
+    </div>
+  </body>
 </html>
