@@ -10,11 +10,9 @@ body {
   font-style: normal;
 
   background-color: black;
-  background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
   width: auto;
-  transition: all 1s linear;
   overflow: hidden;
 }
 .wrap-everything {
@@ -22,12 +20,10 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2vh;
   height: 100%;
   width: 100%;
 }
 .wrap-img {
-  margin-bottom: 4vh;
   opacity: 0.8;
   animation: fromTop 2s ease-out;
 }
@@ -50,17 +46,14 @@ body {
 }
 .wrap-p {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 2vh;
+  gap: 25vw;
 }
 p {
   font-size: 3rem;
-  color: white;
-  text-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
-    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  color: rgb(180, 102, 0);
   animation: show 2s ease-out;
   transition: all 200ms ease-out;
 }
@@ -82,14 +75,14 @@ p {
   }
 
   p {
-    font-size: 4rem;
-    opacity: 0.8;
-    transition: all 200ms ease-out;
+    font-size: 3rem;
+    transition: all 400ms ease-out;
   }
 
   p:hover {
     cursor: pointer;
-    opacity: 1;
-    transition: all 200ms ease-out;
+    color: rgb(255, 164, 45);
+    font-size: 5rem;    
+    transition: all 400ms ease-out;
   }
 }
