@@ -1,60 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pedido</title>
-    <link rel="stylesheet" href="style.css">
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
-    <script src="script.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pedido</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script src="script.js"></script>
 </head>
+
 <body>
   <div id="btn-voltar">
     <div class="btn-group" role="group" aria-label="Basic example">
-      <button
-        onclick="window.location.href='../Cardapio/page.html'"
-        type="button"
-        class="btn btn-primary"
-      >
+      <button onclick="window.location.href='../Cardapio/page.html'" type="button" class="btn btn-primary">
         VOLTAR AO CARDÁPIO
       </button>
     </div>
   </div>
 
-    <div id="error" class="error-modal">
-        <p>Insira um Nome</p>
-        <br>
-        <button class="error-btn" onclick="fechar()">ENTENDI</button>
-    </div>
-    <h1>Pedido</h1>
-    <div class="mb-3">
-      <label for="exampleFormControlInput1" class="form-label">Nome:</label>
-      <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Insira Seu Nome">
-    </div>
+  <div id="error" class="error-modal">
+    <p>Insira um Nome</p>
+    <br>
+    <button class="error-btn" onclick="fechar()">ENTENDI</button>
+  </div>
+  <h1>Pedido</h1>
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Nome:</label>
+    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Insira Seu Nome">
+  </div>
 
-    <button type="button" class="btn btn-outline" onclick="comecar()">COMEÇAR</button>
+  <button type="button" class="btn btn-outline" onclick="comecar()">COMEÇAR</button>
 
-    <div id="selects-div">
-      <h2>Olá <span id="nomePrint"></span>, vamos começar a escolher sua refeição!</h2>
-      <h3>Pratos</h3>
-      <select class="form-select" aria-label="Default select example" id="selectPratos">
-        <option selected>Escolha seus pratos:</option>
-        <option value="1">Favorito do Olimpo</option>
-        <option value="2">Forja de Hefesto</option>
-        <option value="3">Caçada de Ártemis</option>
-      </select>
-      <h3>Bebidas</h3>
+  <div id="selects-div">
+    <h2>Olá <span id="nomePrint"></span>, vamos começar a escolher sua refeição!</h2>
+    <h3>Pratos</h3>
+    <select class="form-select" aria-label="Default select example" id="selectPratos">
+      <option selected>Escolha seus pratos:</option>
+      <option value="1">Favorito do Olimpo</option>
+      <option value="2">Forja de Hefesto</option>
+      <option value="3">Caçada de Ártemis</option>
+    </select>
+    <h3>Bebidas</h3>
     <select class="form-select" aria-label="Default select example" id="selectBebidas">
       <option selected>Escolha suas bebidas</option>
       <option value="1">Submundo</option>
@@ -72,9 +64,22 @@
       <button class="btn btn-success" type="button" onclick="calcularTotal()">Fazer Pedido</button>
       <button class="btn btn-outline-secondary" type="button" onclick="limpar()">Limpar</button>
     </div>
-    <div>
+    <div class="totalDiv" id="total">
+      <div>
+        <span class="badge bg-primary">Total:</span>
+        <span class="badge bg-secondary" id="resultado">Total:</span>
+      </div>
+      <br>
+      <div>
+        <p>Prato:</p>
+        <p id="prato-pronto"></p>
+        <p>Bebida:</p>
+        <p id="bebida-pronto"></p>
+        <p>Sobremesa:</p>
+        <p id="sobremesa-pronto"></p>
+      </div>
     </div>
-      
-    </div>
+  </div>
   </body>
+  
 </html>
